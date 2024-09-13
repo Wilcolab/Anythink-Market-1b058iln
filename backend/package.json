@@ -9,6 +9,7 @@
     "start": "node ./app.js",
     "dev": "nodemon ./app.js",
     "seeds": "node ./scripts/seeds.js",
+    "delete-test-docs": "node ./scripts/delete-test-documents.js",
     "test": "newman run ./tests/api-tests.postman.json -e ./tests/env-api-tests.postman.json",
     "stop": "lsof -ti :3000 | xargs kill"
   },

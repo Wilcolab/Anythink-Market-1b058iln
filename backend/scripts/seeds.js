@@ -1,8 +1,9 @@
 //TODO: seeds script should come here, so we'll be able to put some data in our local env
+require("dotenv").config();
 const { MongoClient } = require("mongodb");
 const crypto = require("crypto");
 
-const uri = "mongodb://mongodb-node:27017/";
+const uri = process.env.MONGODB_URI;
 const client = new MongoClient(uri);
 
 async function run() {
